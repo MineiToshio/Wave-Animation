@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+}
+.container {
+  height: 500px;
+  background: #0f9bf6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.content {
+  font-family: Arial;
+  text-align: center;
+  font-size: 2em;
+  color: rgba(255, 255, 255, .8);
+}
+.waves {
+  position: absolute;
+  overflow: hidden;
+  bottom: -135px;
+  height: 527px;
+  width: 100%;
+}
+.wave {
+  position: absolute;
+  left: -180px;
+  bottom: 0;
+  height: 427px;
+  width: 2402px;
+  background: url("img/waves.png") center no-repeat;
+  animation: 5s wave ease-in-out infinite alternate;
+}
+.wave.a {
+  background-position: 0 -854px;
+}
+.wave.b {
+  animation-delay: .6s;
+  background-position: 0 -427px;
+}
+.wave.c {
+  animation-delay: 1.2s;
+  background-position: 0 0;
+}
+@keyframes wave {
+  from {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-80px, 30px);
+  }
+  to {
+    transform: translate(160px, -60px);
+  }
+}
